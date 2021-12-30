@@ -5,8 +5,8 @@ document.addEventListener('prechange', function(event) {
  
 
 
-const API_KEY = '007d372694c979392339b81489989b16';
-const url = 'https://api.themoviedb.org/3/search/movie?api_key=007d372694c979392339b81489989b16';
+const API_KEY = 'YourApiKey';
+const url = 'https://api.themoviedb.org/3/search/movie?api_key=YourApiKey';
 const IMAGE_URL = 'https://image.tmdb.org/t/p/w500';
 
 function movieSection(movies) {
@@ -47,6 +47,7 @@ function createMovieContainer(movies) {
 	movieElement.appendChild(section);
 	
 
+	B
 	return movieElement;
 
 }
@@ -92,8 +93,8 @@ buttonElement.onclick = function(event) {
 
 
 function requestMovies(){
-	fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=007d372694c979392339b81489989b16')
-  .then(
+	fetch('https://api.themoviedb.org/3/trending/movie/day?api_key=YourApiKey')
+		.then(
     function(response) {
       if (response.status !== 200) {
         console.log('Looks like there was a problem. Status Code: ' +
@@ -162,7 +163,7 @@ let img = document.createElement('img');
 
 
   function requestMovies(){
-	fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=007d372694c979392339b81489989b16')
+	fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=YourApiKey')
   .then(
     function(response) {
       if (response.status !== 200) {
